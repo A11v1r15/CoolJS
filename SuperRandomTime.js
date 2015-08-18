@@ -93,10 +93,13 @@ links[90] = "http://superreviewtime.blogspot.com/2015/07/titan-ae.html";
 links[91] = "http://superreviewtime.blogspot.com/2015/07/princesa-kilala.html";
 links[92] = "http://superreviewtime.blogspot.com/2015/08/descendentes.html";
 
-function openLink() {
-  // Chooses a random link:
-  var i = Math.floor(Math.random() * links.length);
-  // Directs the browser to the chosen target:
-  parent.location = links[i];
-  return false;
+window.onload = function() {
+	var a = document.getElementById("randomLink");
+	a.onclick = function openLink() {
+	  // Chooses a random link:
+	  var i = Math.floor(Math.random() * links.length);
+	  // Directs the browser to the chosen target:
+	  parent.location = links[i];
+	  return false;
+	}
 }
